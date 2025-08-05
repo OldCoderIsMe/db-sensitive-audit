@@ -58,7 +58,7 @@ python main.py audit -i
 python main.py audit -f config/database_config.txt
 
 # 直接指定数据库
-python main.py audit -c "prod_db,192.168.1.100,3306,admin,password"
+python main.py audit -c "prod_db,your_host,3306,your_user,your_password"
 ```
 
 ## 使用方法
@@ -101,7 +101,7 @@ python main.py audit -f config.txt -o /path/to/output
 ```
 # 注释行以#开头
 datasource_name,ip,port,username,password
-prod_mysql,192.168.1.100,3306,admin,admin123
+prod_mysql,your_host,3306,your_user,your_password
 dev_mysql,dev.example.com,3306,developer,dev_pass
 ```
 

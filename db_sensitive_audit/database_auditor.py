@@ -923,7 +923,7 @@ def main():
 # 数据源配置示例
 # datasource_name,ip,port,username,password
 test_db1,localhost,3306,root,password123
-test_db2,192.168.1.100,3306,admin,admin123
+test_db2,example.com,3306,admin,admin123
     """
     
     auditor = DatabaseAuditor()

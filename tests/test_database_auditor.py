@@ -32,7 +32,7 @@ class TestDatabaseAuditor:
         config_text = """
 # 注释行
 test_db1,localhost,3306,root,password
-test_db2,192.168.1.100,3306,admin,admin123
+test_db2,example.com,3306,admin,admin123
 
 # 另一个注释
 test_db3,test.com,3306,user,pass123
