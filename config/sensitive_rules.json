@@ -1,0 +1,70 @@
+{
+  "sensitive_rules": {
+    "手机号": {
+      "field_keywords": ["phone", "mobile", "telephone"],
+      "regex_patterns": ["^1[3-9]\\d{9}$"],
+      "description": "中国手机号（11位纯数字，1开头）"
+    },
+    "身份证号": {
+      "field_keywords": [
+        "id_card",
+        "identity",
+        "id_number",
+        "card_no",
+        "cert_no",
+        "idcard"
+      ],
+      "regex_patterns": [
+        "^[1-9]\\d{5}(18|19|20)\\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$",
+        "^[1-9]\\d{5}\\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\\d{3}$"
+      ],
+      "description": "中国身份证号（18位或15位）"
+    },
+    "银行卡号": {
+      "field_keywords": [
+        "bank_card",
+        "card_number",
+        "account_no",
+        "bank_no",
+        "card_no",
+        "account_number"
+      ],
+      "regex_patterns": ["^[1-9]\\d{15,18}$", "^[1-9]\\d{12,19}$"],
+      "description": "银行卡号（13-20位数字）"
+    },
+    "邮箱": {
+      "field_keywords": ["email", "mail", "e_mail", "email_addr"],
+      "regex_patterns": ["^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"],
+      "description": "电子邮箱地址"
+    },
+    "QQ号": {
+      "field_keywords": ["qq", "qq_number", "qq_no", "tencent"],
+      "regex_patterns": ["^[1-9][0-9]{4,10}$"],
+      "description": "QQ号码（5-11位数字）"
+    },
+    "微信号": {
+      "field_keywords": ["wechat", "weixin", "wx", "wechat_id"],
+      "regex_patterns": ["^[a-zA-Z][a-zA-Z0-9_-]{5,19}$"],
+      "description": "微信号（字母开头，6-20位字母数字下划线）"
+    },
+    "IP地址": {
+      "field_keywords": ["ip", "ip_addr", "ip_address", "host"],
+      "regex_patterns": [
+        "^((25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)$"
+      ],
+      "description": "IPv4地址"
+    },
+    "MAC地址": {
+      "field_keywords": ["mac", "mac_addr", "mac_address", "hardware_addr"],
+      "regex_patterns": ["^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"],
+      "description": "MAC地址"
+    }
+  },
+  "settings": {
+    "enabled_rules": ["手机号", "身份证号", "银行卡号"],
+    "case_sensitive": false,
+    "max_field_length": 100,
+    "exclude_test_data": true,
+    "test_patterns": ["test", "demo", "example", "sample", "fake"]
+  }
+}

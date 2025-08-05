@@ -1,0 +1,21 @@
+# Security Audit Checker Dependencies
+# 安全审计检查器依赖包
+
+# 核心依赖
+pymysql>=1.0.0        # MySQL数据库连接
+pandas>=1.5.0         # 数据处理
+openpyxl>=3.0.0       # Excel文件操作
+click>=8.0.0          # 命令行工具
+pyyaml>=6.0           # YAML配置文件支持
+requests>=2.28.0      # HTTP请求库
+
+# 开发依赖
+pytest>=7.0.0         # 测试框架
+pytest-cov>=4.0.0     # 测试覆盖率
+black>=22.0.0         # 代码格式化
+flake8>=5.0.0         # 代码检查
+mypy>=0.991           # 类型检查
+
+# 安全相关
+bandit>=1.7.0         # 安全漏洞检查
+safety>=2.0.0         # 依赖安全检查
